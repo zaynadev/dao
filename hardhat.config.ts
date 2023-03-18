@@ -19,7 +19,15 @@ const config: HardhatUserConfig = {
       chainId: 31337,
     },
   },
-  solidity: "0.8.18",
+  solidity: {
+    version: "0.8.18",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 1000,
+      },
+    },
+  },
   namedAccounts: {
     deployer: {
       default: 0,
