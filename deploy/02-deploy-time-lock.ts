@@ -1,4 +1,4 @@
-import { MIN_DEPLAY } from "./../helper-hardhat-config";
+import { MIN_DELAY } from "./../helper-hardhat-config";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
 
@@ -12,7 +12,7 @@ const deployTimeLock: DeployFunction = async function (
   log("Deploying TimeLock ...");
   const timeLock = await deploy("TimeLock", {
     from: deployer,
-    args: [MIN_DEPLAY, [], [], deployer],
+    args: [MIN_DELAY, [], [], deployer],
     log: true,
   });
   log(`Deployed TimeLock to address: ${timeLock.address}`);

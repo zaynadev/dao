@@ -1,4 +1,4 @@
-export const MIN_DEPLAY = 3600;
+export const MIN_DELAY = 3600;
 
 export const VOTING_DELAY = 1;
 export const VOTING_PERIOD = 5;
