@@ -1,10 +1,4 @@
-import {
-  ADDRESS_ZERO,
-  MIN_DEPLAY,
-  QUORUM_PERCENTAGE,
-  VOTING_DEPLAY,
-  VOTING_PERIOD,
-} from "./../helper-hardhat-config";
+import { ADDRESS_ZERO } from "./../helper-hardhat-config";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
 import { ethers } from "hardhat";

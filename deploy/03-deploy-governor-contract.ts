@@ -1,7 +1,7 @@
 import {
   MIN_DEPLAY,
   QUORUM_PERCENTAGE,
-  VOTING_DEPLAY,
+  VOTING_DELAY,
   VOTING_PERIOD,
 } from "./../helper-hardhat-config";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
@@ -24,7 +24,7 @@ const deployGovernorContract: DeployFunction = async function (
     args: [
       governanceToken.address,
       timeLock.address,
-      VOTING_DEPLAY,
+      VOTING_DELAY,
       VOTING_PERIOD,
       QUORUM_PERCENTAGE,
     ],
