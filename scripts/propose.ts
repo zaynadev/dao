@@ -7,7 +7,9 @@ import {
   PROPOSAL_DESCRIPTION,
   VOTING_DELAY,
   proposalsFile,
+  VOTING_PERIOD,
 } from "../helper-hardhat-config";
+import { moveBlocks } from "../utils";
 
 export async function propose(
   args: any[],
@@ -33,14 +35,7 @@ export async function propose(
   );
   await proposeTx.wait(1);
   if (DEV_CHAINS.includes(network.name)) {
-    console.log("Moving blocks...");
-    for (let index = 0; index < VOTING_DELAY + 1; index++) {
-      await network.provider.request({
-        method: "evm_mine",
-        params: [],
-      });
-    }
-    console.log(`Moved ${VOTING_DELAY + 1} blocks`);
+    await moveBlocks(VOTING_PERIOD + 1);
   }
 
   const proposeReceipt = await proposeTx.wait(1);

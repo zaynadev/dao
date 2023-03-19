@@ -12,4 +12,4 @@ export const PROPOSAL_DESCRIPTION = "Proposal #1: store 77 in the box!";
 
 export const DEV_CHAINS = ["hardhat", "localhost"];
 
-export const proposalsFile = "proposals.json";
+export const proposalsFile = "./proposals.json";
